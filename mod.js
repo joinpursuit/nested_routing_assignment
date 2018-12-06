@@ -46,7 +46,7 @@ function getSpecificPicture(req, res, next) {
     }
     next();
   }
-  console.log(req)
+
   res.msg = pictures[theID - 1]
   next();
 }
