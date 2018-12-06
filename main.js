@@ -7,7 +7,7 @@ let pictures = require("./routes/pictures");
 app.use("/users", users);
 //.use takes an instance of middleware or Router
 app.use("/pictures", pictures);
-app.use("/post", posts);
+app.use("/posts", posts);
 
 app.get("*", (req, res) => {
   res.status(404).json({

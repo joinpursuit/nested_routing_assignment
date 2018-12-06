@@ -135,36 +135,6 @@ let pictures = [
   }
 ];
 
-// function getDataUsers(req, res, next) {
-  // let thedata = req.params.id;
-  // if (data.users[theData.length-1]) {
-  //   res.sender = thedata;
-  //   console.log("what isnt working");
-  //   next();
-  // } else {
-  //   res.sender = "nope"
-  //   console.log("nope nope")
-  //   next();
-  // }
-//   res.sender = "here"
-// }
 
-function getDataUsers(req,res,next){
-  // let data = req.params.id
-  if (!data.users[req.params.id]){
-    res.sender = data.users[req.params.id - 1]
-    console.log("hii");
-    next();
 
-  } else {
-    res.sender = {
-      status:"failed",
-      chooser:"invalid id"
-    }
-    console.log("heeyyyy");
-    next();
-  }
-  console.log("something");
-}
-
-module.exports = { users, posts, pictures, getDataUsers };
+module.exports = { users, posts, pictures };
