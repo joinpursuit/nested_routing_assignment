@@ -8,6 +8,11 @@ let picture = require('./routes/picture.js')
 app.use('/user', users)
 app.use('/post', post)
 app.use('/picture', picture)
+
+app.get('*', (req, res) => {
+  res.send("404 Page not found")
+})
+
 app.listen(3000, () => {
   console.log('Listening to port 3000')
 })
