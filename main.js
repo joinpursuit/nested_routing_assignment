@@ -7,8 +7,8 @@ let pictures = require('./routes/pictures');
 
 
 app.use('/users', users);
-app.use('/posts', posts);
-app.use('/pictures', pictures);
+app.use('/post', posts);
+app.use('/picture', pictures);
 
 app.get('*', (req, res) => {
   let errorInput = req

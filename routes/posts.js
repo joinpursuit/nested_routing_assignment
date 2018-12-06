@@ -12,4 +12,9 @@ router.get("/:id", mod.getSpecificPost, (req, res) => {
   res.json(res.msg)
 })
 
+router.get("/user/:id", mod.getPostsbyUserId, (req, res) => {
+  res.json(res.msg)
+})
+
+
 module.exports = router;

@@ -10,4 +10,8 @@ router.get("/:id", mod.getSpecificPicture, (req, res) => {
   res.json(res.msg)
 })
 
+router.get("/user/:id", mod.getPicturesbyUserId, (req, res) => {
+  res.json(res.msg)
+})
+
 module.exports = router;

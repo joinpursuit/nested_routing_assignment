@@ -7,6 +7,7 @@ router.get('/', (req, res) => {
 });
 router.get("/:id", mod.getSpecificUser, (req, res) => {
   res.json(res.msg)
-})
+});
+
 
 module.exports = router;

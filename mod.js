@@ -50,8 +50,29 @@ function getSpecificPicture(req, res, next) {
   res.msg = pictures[theID - 1]
   next();
 }
+
+function getPostsbyUserId(req, res, next) {
+  let anId = parseInt(req.params.id);
+  let result = posts.filter(obj =>
+    obj["userId"] === anId)
+  console.log(result);
+
+  res.msg = result;
+  next();
+}
+
+function getPicturesbyUserId(req, res, next) {
+  let anId = parseInt(req.params.id);
+  let result = pictures.filter(obj =>
+    obj["userId"] === anId)
+  console.log(result);
+  res.msg = result;
+  next();
+}
 module.exports = {
   getSpecificUser,
   getSpecificPost,
   getSpecificPicture,
+  getPostsbyUserId,
+  getPicturesbyUserId
 }

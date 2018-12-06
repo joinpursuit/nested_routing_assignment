@@ -52,7 +52,7 @@ let users = [{
 
 let posts = [{
     id: 1,
-    userId: 6,
+    userId: 3,
     body: "Creative learning curve business plan. Conversion bandwidth partner network traction deployment focus leverage. Monetization social proof marketing scrum project investor innovator stock."
   },
   {
@@ -62,7 +62,7 @@ let posts = [{
   },
   {
     id: 3,
-    userId: 4,
+    userId: 3,
     body: "Freemium MVP graphical user interface bandwidth crowdfunding stealth. Deployment traction pitch innovator beta monetization iPhone pivot."
   },
   {
@@ -104,7 +104,7 @@ let posts = [{
 
 let pictures = [{
     id: 1,
-    userId: 6,
+    userId: 2,
     url: "https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
   },
   {
