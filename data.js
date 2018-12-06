@@ -1,3 +1,6 @@
+let express = require("express");
+let router = express.Router();
+
 let users = [
   { id: 1, name: "Gregor Samsa", age: 54 },
   { id: 2, name: "Bobbie Tillman", age: 23 },
@@ -131,3 +134,37 @@ let pictures = [
       "https://images.pexels.com/photos/271955/pexels-photo-271955.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
   }
 ];
+
+// function getDataUsers(req, res, next) {
+  // let thedata = req.params.id;
+  // if (data.users[theData.length-1]) {
+  //   res.sender = thedata;
+  //   console.log("what isnt working");
+  //   next();
+  // } else {
+  //   res.sender = "nope"
+  //   console.log("nope nope")
+  //   next();
+  // }
+//   res.sender = "here"
+// }
+
+function getDataUsers(req,res,next){
+  // let data = req.params.id
+  if (!data.users[req.params.id]){
+    res.sender = data.users[req.params.id - 1]
+    console.log("hii");
+    next();
+
+  } else {
+    res.sender = {
+      status:"failed",
+      chooser:"invalid id"
+    }
+    console.log("heeyyyy");
+    next();
+  }
+  console.log("something");
+}
+
+module.exports = { users, posts, pictures, getDataUsers };
