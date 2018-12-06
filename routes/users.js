@@ -2,7 +2,7 @@ const express = require('express');
 // const users = require('../app');
 const router = express.Router();
 
-router.get('/:id', (req, res) => {
+router.get('/user/:id', (req, res) => {
   let userID = req.params.id;
 
   let results = users[userID - 1]

@@ -1,13 +1,15 @@
 const express = require('express');
 const app = express();
 const usersRouter = require('./routes/users');
+const postsRouter = require('./routes/posts');
 let port = 5000;
 
 app.use('/users', usersRouter);
+app.use('/posts', postsRouter);
 
 app.get('*', (req, res) => {
   res.status(404).send(`Error 404: Something went wrong.`)
-})
+});
 
 app.listen(port, () => {
   console.log(`Listening to port ${port}.`);
