@@ -1,3 +1,35 @@
+const express = require('express');
+const app = express();
+const usersRouter = require('./routes/users');
+let port = 5000;
+
+app.use('/users', usersRouter);
+
+app.get('*', (req, res) => {
+  res.status(404).send(`Error 404: Something went wrong.`)
+})
+
+app.listen(port, () => {
+  console.log(`Listening to port ${port}.`);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let users = [
   { id: 1, name: "Gregor Samsa", age: 54 },
   { id: 2, name: "Bobbie Tillman", age: 23 },
@@ -131,3 +163,5 @@ let pictures = [
       "https://images.pexels.com/photos/271955/pexels-photo-271955.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
   }
 ];
+
+module.exports = users;
