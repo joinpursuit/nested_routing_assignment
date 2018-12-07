@@ -6,9 +6,10 @@ let results = [];
 
 
 router.get('/', (req,res)=> {
-  res.json({
+  res.set("Access-Control-Allow-Origin", "*");
+  res.json(
     posts
-  })
+  )
 })
 
 router.get("/user/:id", (req, res) => {
@@ -19,6 +20,7 @@ router.get("/user/:id", (req, res) => {
         // console.log(idResults[i].userId);
         results.push(idResults[i].userId)
         if(results.includes(userInput)=== true){
+          res.set("Access-Control-Allow-Origin", "*");
             res.json(posts[i])
         }
     }
@@ -27,6 +29,7 @@ router.get("/user/:id", (req, res) => {
 router.get('/:id', (req,res)=> {
   let userInput = req.params.id;
   let results = posts[userInput - 1]
+  res.set("Access-Control-Allow-Origin", "*");
   res.json(results)
 })
 

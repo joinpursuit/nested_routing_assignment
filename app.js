@@ -13,7 +13,7 @@ const pictureRoutes = require("./routes/pictures.js")
 
 app.use("/users", userRoutes)
 app.use("/posts", postRoutes)
-app.use("/picture",pictureRoutes)
+app.use("/pictures",pictureRoutes)
 
 
 
