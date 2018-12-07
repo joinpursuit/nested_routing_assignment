@@ -1,4 +1,4 @@
-let users = [
+let user = [
   { id: 1, name: "Gregor Samsa", age: 54 },
   { id: 2, name: "Bobbie Tillman", age: 23 },
   { id: 3, name: "Tabitha Ealhstan", age: 34 },
@@ -11,7 +11,7 @@ let users = [
   { id: 10, name: "Julia Layla", age: 55 }
 ];
 
-let posts = [
+let post = [
   {
     id: 1,
     userId: 6,
@@ -69,7 +69,7 @@ let posts = [
   { id: 10, userId: 7, body: "Disruptive value proposition metrics." }
 ];
 
-let pictures = [
+let picture = [
   {
     id: 1,
     userId: 6,
@@ -131,3 +131,9 @@ let pictures = [
       "https://images.pexels.com/photos/271955/pexels-photo-271955.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
   }
 ];
+
+module.exports = {
+  user,
+  post,
+  picture
+};
