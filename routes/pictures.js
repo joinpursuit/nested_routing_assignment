@@ -11,8 +11,13 @@ router.get('/picture/:id', (req, res) => {
 });
 
 router.get('/picture/user/:id', (req, res) => {
-  let userPost = req.params.id;
-  res.json(pictures[userPost - 1]['url'])
+  let userPic = parseInt(req.params.id);
+  let picVal = Object.values(pictures);
+  picVal.forEach(pic => {
+    if (userPic === pic.userId) {
+      res.json(pic);
+    }
+  });
 });
 
 
