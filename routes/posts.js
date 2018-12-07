@@ -12,6 +12,10 @@ router.get('/post/user/:id', (req, res) => {
   res.json(userid)
 });
 
+router.get('/', (req, res) => {
+    res.json(posts);
+});
+
 
 
 
