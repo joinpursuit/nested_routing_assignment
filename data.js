@@ -131,3 +131,9 @@ let pictures = [
       "https://images.pexels.com/photos/271955/pexels-photo-271955.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
   }
 ];
+
+module.exports = {
+  users,
+  pictures,
+  posts
+};
