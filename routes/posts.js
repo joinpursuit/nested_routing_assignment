@@ -7,10 +7,15 @@ router.get('/post/:id', (req, res) => {
 });
 
 router.get('/post/user/:id', (req, res) => {
-  let userPost = req.params.id;
-  let userid = posts[userPost - 1]['body'];
-  res.json(userid)
-});
+  let userPost = parseInt(req.params.id);
+  let postvalues = Object.values(posts);
+  postvalues.forEach(post => {
+    if (userPost === post.userId) {
+      res.json(post);
+    }
+    });
+  });
+
 
 router.get('/', (req, res) => {
     res.json(posts);
