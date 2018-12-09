@@ -2,11 +2,13 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/post/:id', (req, res) => {
+  res.set("Access-Control-Allow-Origin", "*");
   let postID = req.params.id;
   res.json(posts[postID - 1]);
 });
 
 router.get('/post/user/:id', (req, res) => {
+  res.set("Access-Control-Allow-Origin", "*");
   let userPost = parseInt(req.params.id);
   let postvalues = Object.values(posts);
   postvalues.forEach(post => {
@@ -18,7 +20,8 @@ router.get('/post/user/:id', (req, res) => {
 
 
 router.get('/', (req, res) => {
-    res.json(posts);
+  res.set("Access-Control-Allow-Origin", "*");
+  res.json(posts);
 });
 
 

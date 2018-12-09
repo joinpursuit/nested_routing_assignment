@@ -3,13 +3,15 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/user/:id', (req, res) => {
-  let userID = req.params.id;
+  res.set("Access-Control-Allow-Origin", "*");
 
+  let userID = req.params.id;
   let results = users[userID - 1]
   res.json(results)
 });
 
 router.get('/', (req, res) => {
+  res.set("Access-Control-Allow-Origin", "*");
   res.json(users);
   // res.json({ message: `users` });
 });

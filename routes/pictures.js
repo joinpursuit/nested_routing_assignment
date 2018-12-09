@@ -2,15 +2,18 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
+  res.set("Access-Control-Allow-Origin", "*");
   res.json(pictures)
 });
 
 router.get('/picture/:id', (req, res) => {
+  res.set("Access-Control-Allow-Origin", "*");
   let postID = req.params.id;
   res.json(pictures[postID - 1]);
 });
 
 router.get('/picture/user/:id', (req, res) => {
+  res.set("Access-Control-Allow-Origin", "*");
   let userPic = parseInt(req.params.id);
   let picVal = Object.values(pictures);
   picVal.forEach(pic => {
