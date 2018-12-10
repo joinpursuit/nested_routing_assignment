@@ -1,3 +1,6 @@
+let express = require("express");
+let router = express.Router();
+
 let users = [
   { id: 1, name: "Gregor Samsa", age: 54 },
   { id: 2, name: "Bobbie Tillman", age: 23 },
@@ -131,3 +134,7 @@ let pictures = [
       "https://images.pexels.com/photos/271955/pexels-photo-271955.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
   }
 ];
+
+
+
+module.exports = { users, posts, pictures };
