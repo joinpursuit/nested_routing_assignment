@@ -143,9 +143,8 @@ let pictures = [
 //   next()
 // }
 //
-// module.exports = {
-//   // users,
-//   // pictures,
-//   // posts,
-//   res.sum,
-// }
+module.exports = {
+  users,
+  pictures,
+  posts
+}

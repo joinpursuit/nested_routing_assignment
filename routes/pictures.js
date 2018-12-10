@@ -73,17 +73,17 @@ router.get('/', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-  res.posts.map(pictureObject => {
-    res.json({pictureId: req.params.id, picture: res.pictureObject[pictureObject.req.params.id]})
-  })
+  // res.posts.map(pictureObject => {
+  //   res.json({pictureId: req.params.id, picture: res.pictureObject[pictureObject.req.params.id]})
+  // })
 })
 
 router.get('/user/:userId', (req, res) => {
-  res.picture.map(pictureObject => {
-    res.json({
-      userId: req.params.userId, pictures: res.pictureObject.url[pictureObject.req.params.userId]
-    })
-  })
+  // res.picture.map(pictureObject => {
+  //   res.json({
+  //     userId: req.params.userId, pictures: res.pictureObject.url[pictureObject.req.params.userId]
+  //   })
+  // })
 })
 
-module.exports = router,
+module.exports = router

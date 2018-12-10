@@ -78,10 +78,10 @@ router.get('/:id', (req, res) => {
 
 router.get('/user/:userId', (req, res) => {
   res.posts.map(postObject => {
-    res.json({
-      userId: req.params.userId, post: res.postObject.body[postObject.req.params.userId]
-    })
+  //   res.json({
+  //     userId: req.params.userId, post: res.postObject.body[postObject.req.params.userId]
+  //   })
   })
 })
 
-module.exports = router,
+module.exports = router
