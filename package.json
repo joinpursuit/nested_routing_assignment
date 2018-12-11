@@ -1,0 +1,23 @@
+{
+  "name": "nested_routing_assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jevit01/nested_routing_assignment.git"
+  },
+  "author": "Thomas Perez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jevit01/nested_routing_assignment/issues"
+  },
+  "homepage": "https://github.com/Jevit01/nested_routing_assignment#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.7"
+  }
+}
