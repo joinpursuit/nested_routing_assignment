@@ -10,26 +10,23 @@ const showAllUsers = (req, res) => {
 
 const singleUserById = (req, res) => {
   const id = req.params.id
-  const findUser = data.users.find(object => {
-      // console.log(object.id);
-    return object.id == id
-  })
-
-  if(findUser){
-    res.json(findUser)
-  }
-  else {
-    res.json('NOT A USER')
-  }
-
-  // data.users.find(object =>{
-  //   if (object.id === id) {
-  //     res.json(object)
-  //   }
-  //   else {
-  //     res.json({ message: 'Not a user' })
-  //   }
+  // const findUser = data.users.find(object => {
+  //   return object.id == id
   // })
+  // if(findUser){res.json(findUser)}
+  // else {res.json('NOT A USER')}
+
+
+  let objectId = data.users.forEach(object =>{
+    if (object.id == id) {
+      answer = (object)
+    }
+    else {
+      answer = ({ message: 'Not a user' })
+    }
+    return answer
+  })
+  res.json(objectId)
     // console.log(object)})
 
   // res.json(data.user);
