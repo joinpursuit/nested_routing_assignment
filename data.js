@@ -145,6 +145,6 @@ let pictures = [
 //
 module.exports = {
   users,
+  posts,
   pictures,
-  posts
 }

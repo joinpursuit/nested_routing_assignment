@@ -1,26 +1,35 @@
 const express = require('express');
 const router = express.Router();
-
+const data = require('../data.js');
 //==============================
 
 router.get('/', (req, res) => {
-  res.json({
-    pictures: pictures
-  })
+  res.json(
+    data.pictures
+  )
 })
 
 router.get('/:id', (req, res) => {
-  // res.posts.map(pictureObject => {
-  //   res.json({pictureId: req.params.id, picture: res.pictureObject[pictureObject.req.params.id]})
-  // })
+  let id = req.params.id
+
+  let findWithPictureId = data.pictures.find(object => {
+    return object.id == id
+  })
+
+  findWithPictureId ? res.json(findWithPictureId) : res.json('A picture having this id does not exist.')
 })
 
-router.get('/user/:userId', (req, res) => {
-  // res.picture.map(pictureObject => {
-  //   res.json({
-  //     userId: req.params.userId, pictures: res.pictureObject.url[pictureObject.req.params.userId]
-  //   })
-  // })
+
+router.get('/user/:id', (req, res) => {
+  let userId = req.params.id
+
+  let findPictureByUserId = data.pictures.find(objElement => {
+    return objElement.userId === parseInt(userId)
+  })
+
+  findPictureByUserId ? res.json(findPictureByUserId) : res.json('Either no picture belonging to this user exists  or else this user does not exist.')
 })
+
+//---------------------------
 
 module.exports = router
