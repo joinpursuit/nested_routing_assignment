@@ -8,6 +8,7 @@ const showAllUsers = (req, res) => {
   res.json(data.users)
 }
 
+//==========================
 const singleUserById = (req, res) => {
   let id = req.params.id
 

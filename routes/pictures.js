@@ -9,6 +9,7 @@ router.get('/', (req, res) => {
   )
 })
 
+//==========================
 router.get('/:id', (req, res) => {
   let id = req.params.id
 
@@ -20,6 +21,7 @@ router.get('/:id', (req, res) => {
 })
 
 
+//==========================
 router.get('/user/:id', (req, res) => {
   let userId = req.params.id
 
@@ -30,6 +32,7 @@ router.get('/user/:id', (req, res) => {
   findPictureByUserId ? res.json(findPictureByUserId) : res.json('Either no picture belonging to this user exists  or else this user does not exist.')
 })
 
-//---------------------------
+
+//==========================
 
 module.exports = router
