@@ -1,3 +1,6 @@
+// const express = require('express');
+// const router = express.Router()
+
 let users = [
   { id: 1, name: "Gregor Samsa", age: 54 },
   { id: 2, name: "Bobbie Tillman", age: 23 },
@@ -66,7 +69,9 @@ let posts = [
     body:
       "A/B testing hypotheses ecosystem entrepreneur conversion interaction design. Seed money funding pitch."
   },
-  { id: 10, userId: 7, body: "Disruptive value proposition metrics." }
+  { id: 10,
+    userId: 7,
+    body: "Disruptive value proposition metrics." }
 ];
 
 let pictures = [
@@ -131,3 +136,15 @@ let pictures = [
       "https://images.pexels.com/photos/271955/pexels-photo-271955.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
   }
 ];
+
+// let sum = [4,5,6,9]
+// const arrays = (req, res, next) => {
+//   res.sum = sum
+//   next()
+// }
+//
+module.exports = {
+  users,
+  posts,
+  pictures,
+}
